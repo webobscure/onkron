@@ -1,0 +1,33 @@
+<?php
+$get_data = file_get_contents('https://onkron.ru/testing.json');
+$get_data = json_decode($get_data, true);
+?>
+
+ <section class="first-section">
+                                    <h1 class="description-title"> <?php echo $get_data["title"] ?> </h1>
+                                    <p class="description-text"> <?php $title = $get_data["descr_title"];
+                                                                    $title = explode(" ", $title, 2);
+                                                                    echo '<span class="bold-text">' . $title[0] . '</span>' . " " . $title[1]; ?></p>
+                                    <img src="assets/stage.png" alt="стойка" class="description-image">
+
+                                    <div class="column">
+                                        <?php foreach ($get_data["icons"] as $data) : ?>
+                                            <div class="column-card">
+                                                <img src="<?php echo $data["url"] ?>" alt="icon" class="card-image">
+                                                <h2 class=><?php echo $data["title"] ?></h2>
+                                                <p><?php echo $data["descr_title"] ?></p>
+                                            </div>
+                                        <?php endforeach ?>
+                                    </div>
+                                </section>
+                                <section class="second-section" id="pres">
+                                    <?php foreach ($get_data["blocks"] as $block) : ?>
+                                        <div class="presentaion-card">
+                                            <img src="<?php echo $block["url"] ?>" class="presentation-card_image">
+                                            <p class="presentation-card_descr"><?php echo $block["label_text"] ?></p>
+                                        </div>
+                                    <?php endforeach ?>
+                                </section>
+                                <section></section>
+                                <section></section>
+                                <section></section>
