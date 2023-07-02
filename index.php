@@ -769,7 +769,7 @@ $get_data = json_decode($get_data, true);
                                     <p class="description-text"> <?php $title = $get_data["descr_title"];
                                                                     $title = explode(" ", $title, 2);
                                                                     echo '<span class="bold-text">' . $title[0] . '</span>' . " " . $title[1]; ?></p>
-                                    <img src="assets/stage.png" alt="стойка" class="description-image">
+                                    <img src="<?php echo $get_data["main_image"] ?>" alt="стойка" class="description-image">
 
                                     <div class="column">
                                         <?php foreach ($get_data["icons"] as $data) : ?>
