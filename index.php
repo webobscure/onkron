@@ -770,6 +770,7 @@ $get_data = json_decode($get_data, true);
                                                                     $title = explode(" ", $title, 2);
                                                                     echo '<span class="bold-text">' . $title[0] . '</span>' . " " . $title[1]; ?></p>
                                     <img src="<?php echo $get_data["main_image"] ?>" alt="стойка" class="description-image">
+                                    <img src="assets/back.png" alt="dark back" id="back" style="width: 1300px;margin-top:-419px;position: absolute;z-index: 3;opacity:0.8;">
 
                                     <div class="column">
                                         <?php foreach ($get_data["icons"] as $data) : ?>
