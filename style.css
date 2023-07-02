@@ -2375,18 +2375,53 @@ html {
 	width: 1330px;
 }
 
+.presentation-card_descr {
+	position: absolute;
+	margin-left: 100px;
+}
+
+
 .presentation-card_image {
 	width: 600px;
 	height: 600px;
 }
 
-.stage {
-	display: grid;
-	grid-template-rows: (1fr, auto);
+
+.third-section{
+	display: flex;
+	width: 1280px;
+	height: 700px;
 	flex-direction: row;
-	background: aqua;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+}
+
+.stage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 400px;
+	border: 1px solid black;
+}
+
+.stage:nth-child(2n) {
+	flex-direction: column-reverse;
+}
+
+.stage:nth-child(5n) {
+	flex-direction: column-reverse;
+}
+
+.stage-text {
+	position: absolute;
+	top: 500px;
+	width: 100px;
+}
+
+.stage-image {
+	width: 250px;
+	height: 250px;
 }
 
 .bottom-image {
@@ -2436,12 +2471,6 @@ html {
 	content: 'https://shop.onkron.ru/images/new_listing/TS1991B-E/two_column_4.png';
 }
 
-
-
-.stage-image {
-	width: 300px;
-	height: 300px;
-}
 
 /** Конец описание товара**/
 

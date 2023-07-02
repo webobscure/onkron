@@ -783,16 +783,16 @@ $get_data = json_decode($get_data, true);
                                 </section>
                                 <section class="second-section" id="pres">
                                     <?php foreach ($get_data["blocks"] as $block) : ?>
-                                        <div class="presentaion-card">
-                                            <img src="<?php echo $block["url"] ?>" class="presentation-card_image">
-                                            <p class="presentation-card_descr"><?php print_r($block["label_text"]) ?></p>
+                                        <div class="presentaion-card" >
+                                            <img src="<?php echo $block["url"] ?>" class="presentation-card_image" id="<?php echo $block["lable_text"] ?>">
+                                            <p class="presentation-card_descr" id="<?php echo $block["url"] ?>"><?php echo $block["lable_text"]; ?></p>
                                         </div>
                                     <?php endforeach ?>
                                 </section>
                                 <section class="third-section" id="stage">
                                     <?php foreach ($get_data["grids"] as $grid) : ?>
                                         <div class="stage">
-                                            <p class="stage-text"><?php echo $grid["title"] ?></p>
+                                            <p class="stage-text" ></p><?php echo $grid["title"] ?></p>
                                             <img src="<?php echo $grid["url"] ?>" alt="grid-image" class="stage-image <?php echo $grid["title"] ?>">
                                         </div>
                                     <?php endforeach ?>
@@ -801,9 +801,7 @@ $get_data = json_decode($get_data, true);
                                     <?php foreach ($get_data["bottom_image"] as $present) : ?>
                                         <img src="<?php echo $present["image"]; ?>" alt="bottom" class="bottom-image">
                                         <h1 class="exhibitions"><?php echo $present["title"]; ?></h1>
-                                        <?php 
-                                        echo $present["description"];
-                                         ?>
+                                        <?php echo $present["description"]?>
                                     <?php endforeach ?>
                                 </section>
                                 <section id="footer-section">
@@ -1105,3 +1103,4 @@ $get_data = json_decode($get_data, true);
         });
     });
 </script>
+<script defer src="index.js"></script>
