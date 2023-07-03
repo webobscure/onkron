@@ -776,7 +776,7 @@ $get_data = json_decode($get_data, true);
                                         <?php foreach ($get_data["icons"] as $data) : ?>
                                             <div class="column-card">
                                                 <img src="<?php echo $data["url"] ?>" alt="icon" class="card-image">
-                                                <h2 class=><?php echo $data["title"] ?></h2>
+                                                <h2><?php echo $data["title"] ?></h2>
                                                 <p><?php echo $data["descr_title"] ?></p>
                                             </div>
                                         <?php endforeach ?>
